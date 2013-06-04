@@ -38,6 +38,11 @@ set hidden
 " Always show line numbers
 set number
 
+" Open splits in a more natural way (i.e. move the cursor to the newly
+" created split)
+set splitbelow
+set splitright
+
 " Set up some search options
 set hlsearch    " Highlight matches
 set ignorecase 	" Searches are case-insensitive
