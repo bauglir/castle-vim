@@ -56,3 +56,7 @@ map <Leader>s :w<CR> :call RunNearestSpec()<CR>
 map <Leader>l :w<CR> :call RunLastSpec()<CR>
 map <Leader>a :w<CR> :call RunAllSpecs()<CR>
 let g:rspec_command = "!zeus rspec {spec}"
+
+" Set up keymaps for GitGutter hunk movements
+map <Leader>ggn :GitGutterNextHunk<CR>
+map <Leader>ggp :GitGutterPrevHunk<CR>
