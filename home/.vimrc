@@ -54,7 +54,7 @@ set smartcase 	" ... unless they contain at least one capital letter
 " Set up RSpec shorthands to be run through Zeus
 map <Leader>t :w<CR> :call RunCurrentSpecFile()<CR>
 map <Leader>s :w<CR> :call RunNearestSpec()<CR>
-map <Leader>l :w<CR> :call RunLastSpec()<CR>
+map <Leader>ls :w<CR> :call RunLastSpec()<CR>
 map <Leader>a :w<CR> :call RunAllSpecs()<CR>
 let g:rspec_command = "!zeus rspec {spec}"
 
