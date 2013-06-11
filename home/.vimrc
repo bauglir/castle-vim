@@ -27,6 +27,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'vim-scripts/bufkill.vim'
 
 " Manage whitespace
 set nowrap                  " Do not wrap any lines
