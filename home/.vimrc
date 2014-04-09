@@ -1,8 +1,8 @@
 " We don't need Vi compatibility
-set nocompatible 
+set nocompatible
 
 " Required for Vundle
-filetype off 
+filetype off
 
 " Make sure the runtimepath includes Vundle
 set runtimepath+=~/.vim/bundle/vundle
@@ -57,8 +57,8 @@ set splitright
 
 " Set up some search options
 set hlsearch    " Highlight matches
-set ignorecase 	" Searches are case-insensitive
-set smartcase 	" ... unless they contain at least one capital letter
+set ignorecase  " Searches are case-insensitive
+set smartcase   " ... unless they contain at least one capital letter
 
 " Set up RSpec shorthands to be run through Zeus
 map <Leader>t :w<CR> :call RunCurrentSpecFile()<CR>
