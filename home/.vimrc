@@ -23,6 +23,9 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
 Bundle 'sgeb/vim-matlab'
 Bundle 'SirVer/ultisnips'
+" The Instant Markdown plugin has additional dependencies, see
+" https://github.com/suan/vim-instant-markdown for installation instructions
+Bundle 'suan/vim-instant-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-sensible'
