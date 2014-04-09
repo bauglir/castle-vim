@@ -12,6 +12,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'airblade/vim-gitgutter'
+" The Tmux Navigator plugin requires additional configuration for seamless
+" integration with tmux. See https://github.com/christoomey/vim-tmux-navigator
+" for more details
+Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'ervandew/supertab'
 Bundle 'JuliaLang/julia-vim'
 Bundle 'kchmck/vim-coffee-script'
