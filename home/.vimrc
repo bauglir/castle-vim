@@ -70,3 +70,6 @@ let g:rspec_command = "!zeus rspec {spec}"
 " Set up keymaps for GitGutter hunk movements
 map <Leader>ggn :GitGutterNextHunk<CR>
 map <Leader>ggp :GitGutterPrevHunk<CR>
+
+" Ignore directories commonly found in (JavaScript) projects containing dependencies
+set wildignore=*bower_components*,*node_modules*
