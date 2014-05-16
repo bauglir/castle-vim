@@ -73,3 +73,5 @@ map <Leader>ggp :GitGutterPrevHunk<CR>
 
 " Ignore directories commonly found in (JavaScript) projects containing dependencies
 set wildignore=*bower_components*,*node_modules*
+
+colorscheme railscasts
