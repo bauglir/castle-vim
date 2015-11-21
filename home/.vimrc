@@ -74,4 +74,9 @@ map <Leader>ggp :GitGutterPrevHunk<CR>
 " Ignore directories commonly found in (JavaScript) projects containing dependencies
 set wildignore=*bower_components*,*node_modules*
 
+" Enable mouse interactions
+set ttyfast
+set mouse=a
+set ttymouse=xterm2
+
 colorscheme railscasts
