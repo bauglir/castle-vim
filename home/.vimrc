@@ -16,6 +16,7 @@ Plugin 'airblade/vim-gitgutter'
 " integration with tmux. See https://github.com/christoomey/vim-tmux-navigator
 " for more details
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'kchmck/vim-coffee-script'
@@ -82,5 +83,7 @@ set wildignore+=*bower_components*,dist,*node_modules*
 set ttyfast
 set mouse=a
 set ttymouse=xterm2
+
+let EditorConfig_exclude_patterns = ['fugitive://.*']
 
 colorscheme railscasts
