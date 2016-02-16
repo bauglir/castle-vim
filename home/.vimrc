@@ -5,38 +5,42 @@ set nocompatible
 filetype off
 
 " Make sure the runtimepath includes Vundle
-set runtimepath+=~/.vim/bundle/vundle
-call vundle#rc()
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Set bundles to be managed by Vundle (this should include Vundle itself!)
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 " The Tmux Navigator plugin requires additional configuration for seamless
 " integration with tmux. See https://github.com/christoomey/vim-tmux-navigator
 " for more details
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'ervandew/supertab'
-Bundle 'JuliaLang/julia-vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'Raimondi/delimitMate'
-Bundle 'sgeb/vim-matlab'
-Bundle 'SirVer/ultisnips'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'ervandew/supertab'
+Plugin 'JuliaLang/julia-vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'Raimondi/delimitMate'
+Plugin 'sgeb/vim-matlab'
+Plugin 'SirVer/ultisnips'
 " The Instant Markdown plugin has additional dependencies, see
 " https://github.com/suan/vim-instant-markdown for installation instructions
-Bundle 'suan/vim-instant-markdown'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-surround'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'vim-scripts/bufkill.vim'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'vim-scripts/bufkill.vim'
+
+" All of the plugins must be added before this line
+call vundle#end()
+filetype plugin indent on
 
 " Manage whitespace
 set nowrap                  " Do not wrap any lines
