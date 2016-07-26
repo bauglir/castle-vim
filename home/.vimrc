@@ -78,7 +78,7 @@ map <Leader>ggn :GitGutterNextHunk<CR>
 map <Leader>ggp :GitGutterPrevHunk<CR>
 
 " Ignore directories commonly found in (JavaScript) projects containing dependencies
-set wildignore+=*bower_components*,dist,*node_modules*
+set wildignore+=*bower_components*,dist,*node_modules*,tmp
 
 " Enable mouse interactions
 set ttyfast
