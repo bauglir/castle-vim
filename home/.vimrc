@@ -17,7 +17,6 @@ Plugin 'airblade/vim-gitgutter'
 " for more details
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ervandew/supertab'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
@@ -38,6 +37,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'valloric/YouCompleteMe'
 Plugin 'vim-scripts/bufkill.vim'
 
 " All of the plugins must be added before this line
