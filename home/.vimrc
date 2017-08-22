@@ -39,6 +39,8 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/bufkill.vim'
 
 " All of the plugins must be added before this line
@@ -89,3 +91,5 @@ set ttymouse=xterm2
 let EditorConfig_exclude_patterns = ['fugitive://.*']
 
 colorscheme railscasts
+
+let g:airline_theme = 'wombat'
