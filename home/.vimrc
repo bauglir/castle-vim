@@ -30,9 +30,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sgeb/vim-matlab'
 Plugin 'SirVer/ultisnips'
-" The Instant Markdown plugin has additional dependencies, see
-" https://github.com/suan/vim-instant-markdown for installation instructions
-Plugin 'suan/vim-instant-markdown'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
