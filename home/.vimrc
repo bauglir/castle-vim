@@ -17,6 +17,7 @@ Plugin 'airblade/vim-gitgutter'
 " for more details
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
@@ -93,3 +94,11 @@ let EditorConfig_exclude_patterns = ['fugitive://.*']
 colorscheme railscasts
 
 let g:airline_theme = 'wombat'
+let g:tmuxline_preset = {
+  \'a'    : '#S',
+  \'c'    : [ '#(whoami)', '#(uptime | cut -d " " -f 1,2,3)' ],
+  \'win'  : '#I #W',
+  \'cwin' : [ '#I', '#W', '#F' ],
+  \'x'    : '%R',
+  \'y'    : '%F',
+  \'z'    : [ '#h', "#(ifconfig enp3s0 | grep inet | awk '{print $2}' | sed 's/addr://g' | head -n 1)" ]}
