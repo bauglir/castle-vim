@@ -92,7 +92,8 @@ colorscheme railscasts
 let g:airline_theme = 'wombat'
 let g:tmuxline_preset = {
   \'a'    : '#S',
-  \'c'    : [ '#(whoami)', '#(uptime | cut -d " " -f 1,2,3)' ],
+  \'b'    : '#(uptime | cut -d "," -f1 | cut -d " " -f4-)',
+  \'c'    : '#(whoami)',
   \'win'  : '#I #W',
   \'cwin' : [ '#I', '#W', '#F' ],
   \'x'    : '%R',
