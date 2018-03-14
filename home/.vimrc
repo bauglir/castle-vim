@@ -23,6 +23,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'majutsushi/tagbar'
+Plugin 'mileszs/ack.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -84,6 +85,11 @@ set wildignore+=*bower_components*,dist,*node_modules*,tmp
 set ttyfast
 set mouse=a
 set ttymouse=xterm2
+
+" Set Ack.vim to use the_silver_searcher
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+end
 
 let EditorConfig_exclude_patterns = ['fugitive://.*']
 
