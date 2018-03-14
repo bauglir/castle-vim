@@ -19,7 +19,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'JuliaLang/julia-vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'majutsushi/tagbar'
@@ -90,6 +90,12 @@ set ttymouse=xterm2
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 end
+
+" Use fzf for fuzzy (file) searching
+set rtp+=~/.fzf
+nmap ; :Buffers<CR>
+nmap <C-p> :Files<CR>
+nmap <C-t> :Tags<CR>
 
 let EditorConfig_exclude_patterns = ['fugitive://.*']
 
