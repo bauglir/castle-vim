@@ -23,6 +23,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'majutsushi/tagbar'
+Plugin 'matze/vim-move'
 Plugin 'mileszs/ack.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
@@ -98,6 +99,7 @@ let EditorConfig_exclude_patterns = ['fugitive://.*']
 colorscheme railscasts
 
 let g:airline_theme = 'wombat'
+let g:move_key_modifier = 'C'
 let g:tmuxline_preset = {
   \'a'    : '#S',
   \'b'    : '#(uptime | cut -d "," -f1 | cut -d " " -f4-)',
