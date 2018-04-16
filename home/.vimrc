@@ -109,3 +109,5 @@ let g:tmuxline_preset = {
   \'x'    : '%R',
   \'y'    : '%F',
   \'z'    : [ '#h', "#(ifconfig enp3s0 | grep inet | awk '{print $2}' | sed 's/addr://g' | head -n 1)" ]}
+
+inoremap jk <ESC>
