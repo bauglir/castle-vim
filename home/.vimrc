@@ -111,3 +111,13 @@ let g:tmuxline_preset = {
   \'z'    : [ '#h', "#(ifconfig enp3s0 | grep inet | awk '{print $2}' | sed 's/addr://g' | head -n 1)" ]}
 
 inoremap jk <ESC>
+
+" Make sure the Alt modifier works in Gnome terminal (see
+" https://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim)
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+set ttimeout ttimeoutlen=50
