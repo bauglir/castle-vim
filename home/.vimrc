@@ -149,5 +149,6 @@ let g:LanguageClient_serverCommands = {
   \ 'html': [ 'html-languageserver', '--stdio' ],
   \ 'json': [ 'json-languageserver', '--stdio' ],
   \ 'ruby': [ 'solargraph', 'stdio' ],
-  \ 'scss': [ 'css-languageserver', '--stdio' ]
+  \ 'scss': [ 'css-languageserver', '--stdio' ],
+  \ 'typescript': [ 'typescript-language-server', '--stdio' ]
 \ }
