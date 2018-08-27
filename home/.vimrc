@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'airblade/vim-gitgutter'
+Plugin 'autozimu/LanguageClient-neovim'
 " The Tmux Navigator plugin requires additional configuration for seamless
 " integration with tmux. See https://github.com/christoomey/vim-tmux-navigator
 " for more details
@@ -62,6 +63,10 @@ set hidden
 
 " Always show line numbers
 set number
+
+" Always show the 'sign column' (this provides a more stable experience for
+" feedback from GitGutter and LanguageClient)
+set signcolumn=yes
 
 " Open splits in a more natural way (i.e. move the cursor to the newly
 " created split)
