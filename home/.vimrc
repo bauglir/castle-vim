@@ -142,3 +142,10 @@ set completeopt=noinsert,menuone,noselect
 " Use <TAB> to select the ncm2 popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Define Language Server Protocol Servers
+let g:LanguageClient_serverCommands = {
+  \ 'css': [ 'css-languageserver', '--stdio' ],
+  \ 'html': [ 'html-languageserver', '--stdio' ],
+  \ 'scss': [ 'css-languageserver', '--stdio' ]
+\ }
