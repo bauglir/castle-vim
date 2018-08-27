@@ -2,4 +2,4 @@
 `pip3 install neovim`
 
 # Language servers for ncm2's Language Server Protocol Support
-`npm install -g vscode-css-languageserver-bin vscode-html-languageserver-bin`
+`npm install -g vscode-css-languageserver-bin vscode-html-languageserver-bin vscode-json-languageserver-bin`

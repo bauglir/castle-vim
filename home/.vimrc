@@ -147,5 +147,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:LanguageClient_serverCommands = {
   \ 'css': [ 'css-languageserver', '--stdio' ],
   \ 'html': [ 'html-languageserver', '--stdio' ],
+  \ 'json': [ 'json-languageserver', '--stdio' ],
   \ 'scss': [ 'css-languageserver', '--stdio' ]
 \ }
