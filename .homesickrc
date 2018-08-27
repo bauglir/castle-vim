@@ -2,4 +2,5 @@
 `pip3 install neovim`
 
 # Language servers for ncm2's Language Server Protocol Support
+`gem install --no-ri --no-rdoc solargraph`
 `npm install -g vscode-css-languageserver-bin vscode-html-languageserver-bin vscode-json-languageserver-bin`
