@@ -78,12 +78,12 @@ set hlsearch    " Highlight matches
 set ignorecase  " Searches are case-insensitive
 set smartcase   " ... unless they contain at least one capital letter
 
-" Set up RSpec shorthands to be run through Zeus
+" Set up RSpec shorthands
 map <Leader>t :w<CR> :call RunCurrentSpecFile()<CR>
 map <Leader>s :w<CR> :call RunNearestSpec()<CR>
 map <Leader>ls :w<CR> :call RunLastSpec()<CR>
 map <Leader>a :w<CR> :call RunAllSpecs()<CR>
-let g:rspec_command = "!zeus rspec {spec}"
+let g:rspec_command = "!rspec {spec}"
 
 " Ignore directories commonly found in (JavaScript) projects containing dependencies
 set wildignore+=*bower_components*,dist,*node_modules*,tmp
