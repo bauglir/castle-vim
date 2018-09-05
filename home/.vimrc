@@ -19,7 +19,7 @@ Plugin 'autozimu/LanguageClient-neovim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'JuliaLang/julia-vim'
+Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Lokaltog/vim-easymotion'
@@ -142,6 +142,8 @@ set completeopt=noinsert,menuone,noselect
 " Use <TAB> to select the ncm2 popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+let g:default_julia_version = '0.6'
 
 " Define Language Server Protocol Servers
 let g:LanguageClient_serverCommands = {
