@@ -150,6 +150,7 @@ let g:LanguageClient_serverCommands = {
   \ 'css': [ 'css-languageserver', '--stdio' ],
   \ 'html': [ 'html-languageserver', '--stdio' ],
   \ 'json': [ 'json-languageserver', '--stdio' ],
+  \ 'julia': [ 'julia', '--startup-file=no', '--history-file=no', '-e', 'using LanguageServer; server = LanguageServer.LanguageServerInstance(STDIN, STDOUT, false); server.runlinter = true; run(server)' ],
   \ 'ruby': [ 'solargraph', 'stdio' ],
   \ 'scss': [ 'css-languageserver', '--stdio' ],
   \ 'typescript': [ 'typescript-language-server', '--stdio' ]
