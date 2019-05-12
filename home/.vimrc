@@ -61,8 +61,9 @@ set expandtab               " Use spaces, not tabs
 " require a write before hiding)
 set hidden
 
-" Always show line numbers
+" Always show current line number surrounded by relative offsets
 set number
+set relativenumber
 
 " Always show the 'sign column' (this provides a more stable experience for
 " feedback from GitGutter and LanguageClient)
