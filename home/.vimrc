@@ -33,6 +33,7 @@ Plugin 'ncm2/ncm2-path'
 Plugin 'ncm2/ncm2-tmux'
 Plugin 'mileszs/ack.vim'
 Plugin 'Raimondi/delimitMate'
+Plugin 'reedes/vim-litecorrect'
 Plugin 'reedes/vim-pencil'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
@@ -146,6 +147,7 @@ augroup prose
   " to force text to be wrapped using hard line breaks
   autocmd FileType markdown,yaml,text setlocal spell
                                       \ | call pencil#init({ 'wrap': 'hard' })
+                                      \ | call litecorrect#init()
 augroup end
 
 " Enable ncm2 for all buffers
