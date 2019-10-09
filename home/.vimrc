@@ -133,6 +133,9 @@ while c <= 'z'
 endw
 set ttimeout ttimeoutlen=50
 
+" Enable spell checking for Markdowq, YAML and text files
+autocmd FileType markdown,yaml,text setlocal spell
+
 " Enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
 
