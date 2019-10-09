@@ -40,6 +40,8 @@ Plugin 'sgeb/vim-matlab'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
+" Enables repeating supported plugin maps with .
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
