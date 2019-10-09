@@ -61,7 +61,8 @@ set expandtab               " Use spaces, not tabs
 " require a write before hiding)
 set hidden
 
-" Always show current line number surrounded by relative offsets
+" Always show the current line number, but relative numbers around that for
+" easy navigation
 set number
 set relativenumber
 
