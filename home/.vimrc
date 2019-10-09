@@ -11,6 +11,8 @@ call vundle#begin()
 " Set bundles to be managed by Vundle (this should include Vundle itself!)
 Plugin 'VundleVim/Vundle.vim'
 
+" Drop-in replacement for matchit.vim with syntax highlighting and more
+Plugin 'andymass/vim-matchup'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'autozimu/LanguageClient-neovim'
 " The Tmux Navigator plugin requires additional configuration for seamless
