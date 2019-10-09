@@ -34,6 +34,9 @@ Plug 'junegunn/fzf.vim'
 " Shows the contents of " and @ registers in a sidebar when the respective key
 " is pressed
 Plug 'junegunn/vim-peekaboo'
+" Enhances in-buffer searching with automatic clearing of highlights and
+" improved star-search
+Plug 'junegunn/vim-slash'
 Plug 'leafgarland/typescript-vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'majutsushi/tagbar'
