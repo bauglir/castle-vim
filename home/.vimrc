@@ -121,7 +121,7 @@ let g:tmuxline_preset = {
   \'y'    : '%F',
   \'z'    : [ '#h', "#(ifconfig enp3s0 | grep inet | awk '{print $2}' | sed 's/addr://g' | head -n 1)" ]}
 
-inoremap jk <ESC>
+inoremap jj <ESC>
 
 " Make sure the Alt modifier works in Gnome terminal (see
 " https://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim)
