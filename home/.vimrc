@@ -1,62 +1,68 @@
 " We don't need Vi compatibility
 set nocompatible
 
-" Required for Vundle
-filetype off
+" Automatically install vim-plug if it is not available
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Make sure the runtimepath includes Vundle
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Set bundles to be managed by Vundle (this should include Vundle itself!)
-Plugin 'VundleVim/Vundle.vim'
-
+call plug#begin()
 " Drop-in replacement for matchit.vim with syntax highlighting and more
-Plugin 'andymass/vim-matchup'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'autozimu/LanguageClient-neovim'
+Plug 'andymass/vim-matchup'
+Plug 'airblade/vim-gitgutter'
+Plug 'autozimu/LanguageClient-neovim', {
+  \ 'branch': 'next',
+  \ 'do': 'bash install.sh'
+\ }
 " The Tmux Navigator plugin requires additional configuration for seamless
 " integration with tmux. See https://github.com/christoomey/vim-tmux-navigator
 " for more details
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'JuliaEditorSupport/julia-vim'
-Plugin 'junegunn/fzf.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'majutsushi/tagbar'
-Plugin 'matze/vim-move'
-Plugin 'ncm2/ncm2'
-Plugin 'ncm2/ncm2-bufword'
-Plugin 'ncm2/ncm2-path'
-Plugin 'ncm2/ncm2-tmux'
-Plugin 'mileszs/ack.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'reedes/vim-litecorrect'
-Plugin 'reedes/vim-pencil'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'sgeb/vim-matlab'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'JuliaEditorSupport/julia-vim'
+" Call the installation of fzf. Updating the shell scripts is skipped as the
+" configuration is already included in the castle-base dotfiles if fzf is
+" detected
+Plug 'junegunn/fzf', {
+  \ 'dir': '~/.fzf',
+  \ 'do': './install --key-bindings --completion --no-bash --no-fish --no-update-rc'
+\ }
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'majutsushi/tagbar'
+Plug 'matze/vim-move'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-tmux'
+Plug 'mileszs/ack.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'reedes/vim-litecorrect'
+Plug 'reedes/vim-pencil'
+Plug 'rhysd/vim-grammarous'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
+Plug 'sgeb/vim-matlab'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
 " Enables repeating supported plugin maps with .
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/bufkill.vim'
-
-" All of the plugins must be added before this line
-call vundle#end()
-filetype plugin indent on
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'thoughtbot/vim-rspec'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/bufkill.vim'
+call plug#end()
 
 " Manage whitespace
 set nowrap                  " Do not wrap any lines
