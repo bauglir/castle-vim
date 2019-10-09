@@ -33,6 +33,7 @@ Plugin 'ncm2/ncm2-path'
 Plugin 'ncm2/ncm2-tmux'
 Plugin 'mileszs/ack.vim'
 Plugin 'Raimondi/delimitMate'
+Plugin 'reedes/vim-pencil'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'scrooloose/nerdcommenter'
@@ -137,8 +138,15 @@ while c <= 'z'
 endw
 set ttimeout ttimeoutlen=50
 
-" Enable spell checking for Markdowq, YAML and text files
-autocmd FileType markdown,yaml,text setlocal spell
+" Prose related configuration
+augroup prose
+  autocmd!
+
+  " Enable spell checking for Markdown, YAML and text files and use vim-pencil
+  " to force text to be wrapped using hard line breaks
+  autocmd FileType markdown,yaml,text setlocal spell
+                                      \ | call pencil#init({ 'wrap': 'hard' })
+augroup end
 
 " Enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
