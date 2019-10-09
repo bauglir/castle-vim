@@ -31,6 +31,9 @@ Plug 'junegunn/fzf', {
   \ 'do': './install --key-bindings --completion --no-bash --no-fish --no-update-rc'
 \ }
 Plug 'junegunn/fzf.vim'
+" Shows the contents of " and @ registers in a sidebar when the respective key
+" is pressed
+Plug 'junegunn/vim-peekaboo'
 Plug 'leafgarland/typescript-vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'majutsushi/tagbar'
