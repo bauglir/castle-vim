@@ -1,6 +1,10 @@
 " We don't need Vi compatibility
 set nocompatible
 
+" Support for showing ballons on the mouse hovering over symbols needs to be
+" enabled before ALE is loaded
+let g:ale_set_balloons = 1
+
 " Automatically install vim-plug if it is not available
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -20,6 +24,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 " integration with tmux. See https://github.com/christoomey/vim-tmux-navigator
 " for more details
 Plug 'christoomey/vim-tmux-navigator'
+" The Asynchronous Linting Engine for syntax checking and semantic errors
+Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'JuliaEditorSupport/julia-vim'
@@ -186,3 +192,27 @@ let g:LanguageClient_serverCommands = {
   \ 'scss': [ 'css-languageserver', '--stdio' ],
   \ 'typescript': [ 'typescript-language-server', '--stdio' ]
 \ }
+
+" Asynchronous Linting Engine (ALE) configuration
+"
+" Make sure the following external programs are installed to make the most of
+" this plugin:
+" - apt install jq
+" - npm install -g prettier
+" - pip install proselint
+let g:ale_fixers = {
+  \ '*': [ 'remove_trailing_lines', 'trim_whitespace' ],
+  \ 'css': [ 'prettier' ],
+  \ 'scss': [ 'prettier' ],
+  \ 'html': [ 'prettier' ],
+  \ 'javascript': [ 'prettier' ],
+  \ 'json': [ 'jq' ],
+  \ 'markdown': [ 'prettier' ],
+  \ 'typescript': [ 'prettier' ]
+\ }
+let g:airline#extensions#ale#enabled = 1
+let g:ale_completion_tsserver_autoimport = 1
+let g:ale_fix_on_save = 1
+noremap <Leader>fr :ALEFindReferences<CR>
+noremap <Leader>jd :ALEGoToDefinition<CR>
+noremap <Leader>oi :ALEOrganizeImports<CR>
