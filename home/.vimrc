@@ -28,6 +28,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'edkolev/tmuxline.vim'
+" Enables sending parts of a Vim buffer to a REPL (e.g. Julia, irb, etc.)
+" through tmux by pressing C-c C-c
+Plug 'jpalardy/vim-slime'
 Plug 'JuliaEditorSupport/julia-vim'
 " Call the installation of fzf. Updating the shell scripts is skipped as the
 " configuration is already included in the castle-base dotfiles if fzf is
@@ -216,3 +219,10 @@ let g:ale_fix_on_save = 1
 noremap <Leader>fr :ALEFindReferences<CR>
 noremap <Leader>jd :ALEGoToDefinition<CR>
 noremap <Leader>oi :ALEOrganizeImports<CR>
+
+" This assumes that typically the REPL vim is interacting with is in the
+" second window in the second pane
+let g:slime_target = 'tmux'
+let g:slime_default_config = {
+\ 'socket_name': 'default', 'target_pane': ':1.1'
+\ }
