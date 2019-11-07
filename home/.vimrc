@@ -50,6 +50,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'majutsushi/tagbar'
 Plug 'matze/vim-move'
+" High speed HTML and CSS coding from shorthand
+Plug 'mattn/emmet-vim'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
