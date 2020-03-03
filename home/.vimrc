@@ -79,6 +79,8 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/bufkill.vim'
+" Enables tracking of code statistics
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 " Manage whitespace
