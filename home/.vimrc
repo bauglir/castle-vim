@@ -48,6 +48,8 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-slash'
 Plug 'leafgarland/typescript-vim'
 Plug 'Lokaltog/vim-easymotion'
+" Highlights regions that got yanked
+Plug 'machakann/vim-highlightedyank'
 Plug 'majutsushi/tagbar'
 Plug 'matze/vim-move'
 " High speed HTML and CSS coding from shorthand
